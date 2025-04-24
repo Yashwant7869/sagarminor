@@ -233,7 +233,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser, setLoading } from '../redux/userSlice.jsx';
 
-const API_END_POINT = 'https://minor-8idz.onrender.com/api/v1/user';
+const API_END_POINT = 'https://minor-54k9.onrender.com/api/v1/user';
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
