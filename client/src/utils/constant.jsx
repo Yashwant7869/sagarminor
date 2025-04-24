@@ -1,4 +1,4 @@
-export const API_END_POINT = "https://minor-civ9.onrender.com/api/v1/user";
+export const API_END_POINT = "https://sagarminor.onrender.com/api/v1/user";
 
 
 export  const options = {
