@@ -19,7 +19,7 @@ The "Gamified Mental Wellness Support Platform" is designed to address the growi
 - Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/Aadinath1234/beta_04.git
+git clone https://github.com/sagarpandey006/sagarminor.git
 Navigate to the project directory:
 
 cd beta
