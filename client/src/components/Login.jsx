@@ -6,11 +6,11 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser, setLoading } from '../redux/userSlice.jsx';
 
-<<<<<<< HEAD
-const API_END_POINT = 'http://localhost:8080/api/v1/user';
-=======
+// <<<<<<< HEAD
+// const API_END_POINT = 'http://localhost:8080/api/v1/user';
+// =======
 const API_END_POINT = 'https://sagarminor.onrender.com/api/v1/user';
->>>>>>> 9f23cc0bada2121ad6045dcf67cf935d617420ee
+// >>>>>>> 9f23cc0bada2121ad6045dcf67cf935d617420ee
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
