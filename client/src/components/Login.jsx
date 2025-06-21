@@ -233,7 +233,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser, setLoading } from '../redux/userSlice.jsx';
 
-const API_END_POINT = 'https://minor-8idz.onrender.com/api/v1/user';
+const API_END_POINT = 'http://localhost:8080/api/v1/user';
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -270,10 +270,16 @@ const Login = () => {
     const apiUrl = isLogin ? `${API_END_POINT}/login` : `${API_END_POINT}/register`;
 
     try {
+      // const res = await axios.post(apiUrl, user, {
+      //   headers: { 'Content-Type': 'application/json' },
+      //   withCredentials: true,
+      // });
+
       const res = await axios.post(apiUrl, user, {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true,
       });
+      
 
       if (res && res.data) {
         toast.success(res.data.message);
