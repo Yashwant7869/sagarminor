@@ -1,4 +1,9 @@
-export const API_END_POINT = "https://sagarminor.onrender.com/api/v1/user";
+// Use different API endpoints based on environment
+const API_BASE_URL = import.meta.env.MODE === 'development' 
+  ? 'http://localhost:8080/api/v1/user'
+  : 'https://sagarminor.onrender.com/api/v1/user';
+
+export const API_END_POINT = API_BASE_URL;
 
 
 
