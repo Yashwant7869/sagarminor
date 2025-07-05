@@ -22,7 +22,7 @@ export default function CriminalFormPage() {
   useEffect(() => {
     if (!id) return;
 
-    axios.get(`http://localhost:8080/api/v1/crime/criminals/${_id}`).then(response => {
+    axios.get(`/api/v1/crime/criminals/${_id}`).then(response => {
       const data = response.data;
       setName(data.name);
       setPhoneNo(data.phoneNo);
@@ -81,7 +81,7 @@ export default function CriminalFormPage() {
       setRedirect(true);
     } else {
   
-      await axios.post('http://localhost:8080/api/v1/crime/criminals', criminalData);
+      await axios.post('/api/v1/crime/criminals', criminalData);
       setRedirect(true);
     }
   }

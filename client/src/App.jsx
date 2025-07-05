@@ -34,7 +34,12 @@ import Ptsd from './components/Article/Ptsd.jsx';
 import Psychosis from './components/Article/Psychosis.jsx';
 
 
-axios.defaults.baseURL = 'http://localhost:8080'; 
+// Set axios defaults based on environment
+const API_BASE = import.meta.env.MODE === 'development' 
+  ? 'http://localhost:8080'
+  : 'https://sagarminor.onrender.com';
+
+axios.defaults.baseURL = API_BASE; 
 axios.defaults.withCredentials = true; 
 
 const App = () => {
