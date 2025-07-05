@@ -1,6 +1,7 @@
 // Use different API endpoints based on environment
-const API_BASE_URL = import.meta.env.MODE === 'development' 
-  ? 'http://localhost:8080/api/v1/user'
+const isDevelopment = import.meta.env.MODE === 'development';
+const API_BASE_URL = isDevelopment 
+  ? '/api/v1/user'  // Use proxy in development
   : 'https://sagarminor.onrender.com/api/v1/user';
 
 export const API_END_POINT = API_BASE_URL;

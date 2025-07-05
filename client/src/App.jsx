@@ -35,12 +35,14 @@ import Psychosis from './components/Article/Psychosis.jsx';
 
 
 // Set axios defaults based on environment
-const API_BASE = import.meta.env.MODE === 'development' 
-  ? 'http://localhost:8080'
+const isDevelopment = import.meta.env.MODE === 'development';
+const API_BASE = isDevelopment 
+  ? '' // Use relative URLs in development (proxy will handle it)
   : 'https://sagarminor.onrender.com';
 
 axios.defaults.baseURL = API_BASE; 
 axios.defaults.withCredentials = true; 
+axios.defaults.headers.common['Content-Type'] = 'application/json'; 
 
 const App = () => {
   return (
